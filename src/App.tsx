@@ -7,6 +7,7 @@ import TestimonialCard from './components/TestimonialCard';
 import BlogCard from './components/BlogCard';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
+import WhatsAppButton from './components/WhatsAppButton';
 
 import { attorneys } from './data/attorneys';
 import { practiceAreas } from './data/practiceAreas';
@@ -23,23 +24,23 @@ function App() {
       <section id="home" className="relative min-h-screen flex items-center justify-center">
         <div className="absolute inset-0 overflow-hidden">
           <img 
-            src="https://images.pexels.com/photos/5668481/pexels-photo-5668481.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
-            alt="Escritório de advocacia" 
-            className="w-full h-full object-cover"
+            src="https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+            alt="Assinatura de contrato" 
+            className="w-full h-full object-cover opacity-80"
           />
-          <div className="absolute inset-0 bg-primary/70"></div>
+          <div className="absolute inset-0 bg-primary/80"></div>
         </div>
         
         <div className="container mx-auto px-4 md:px-8 relative z-10 text-white text-center md:text-left">
           <div className="max-w-3xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-6 leading-tight">
-              Excelência Jurídica com <span className="text-accent">Abordagem Pessoal</span>
+              Excelência em <span className="text-accent">Advocacia Ambiental</span>
             </h1>
             <p className="text-xl md:text-2xl mb-10 text-gray-200">
-              Advogados dedicados fornecendo orientação especializada e soluções inovadoras para seus desafios jurídicos mais complexos.
+              Advogados dedicados fornecendo orientação especializada e soluções eficientes para questões ambientais mais complexas.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <Button variant="secondary" size="lg">
+              <Button variant="secondary" size="lg" href="#contact">
                 Agende uma Consulta
               </Button>
               <Button variant="outline" size="lg" className="text-white border-white hover:bg-white hover:text-primary">
@@ -97,7 +98,7 @@ function App() {
                 Sobre Henrique Kratka
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                Fundado em 2000, o escritório Henrique Kratka estabeleceu-se como referência jurídica com reputação de excelência e satisfação do cliente. Nossa equipe de advogados experientes combina profundo conhecimento jurídico com compromisso de serviço personalizado.
+                Fundado em 2000, o escritório Kratka Advogados estabeleceu-se como referência jurídica com reputação de excelência e satisfação do cliente. Nossa equipe de advogados experientes combina profundo conhecimento jurídico com compromisso de serviço personalizado.
               </p>
               <p className="text-lg text-gray-600 mb-8">
                 Acreditamos em construir relacionamentos duradouros com nossos clientes, compreendendo suas necessidades únicas e entregando soluções personalizadas que atendam seus desafios jurídicos específicos. Nossa abordagem é colaborativa, transparente e focada em alcançar os melhores resultados possíveis.
@@ -277,6 +278,10 @@ function App() {
       </section>
       
       <Footer />
+      <WhatsAppButton 
+        phoneNumber="5511999999999" // Replace with your actual WhatsApp number
+        message="Olá! Gostaria de agendar uma consulta sobre questões ambientais."
+      />
     </div>
   );
 }

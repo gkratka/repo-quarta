@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,7 +23,7 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center">
           <a href="#home" className="flex items-center">
             <span className={`text-2xl font-serif font-bold ${isScrolled ? 'text-primary' : 'text-white'}`}>
-              Henrique Kratka
+              Kratka Advogados
             </span>
           </a>
 
