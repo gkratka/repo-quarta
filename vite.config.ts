@@ -19,14 +19,6 @@ export default defineConfig({
     strictPort: true,
     host: true,
     open: true,
-    hmr: {
-      overlay: true,
-      timeout: 30000,
-    },
-    watch: {
-      usePolling: true,
-      interval: 1000,
-    },
   },
   optimizeDeps: {
     exclude: ['lucide-react'],
@@ -35,9 +27,14 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     sourcemap: true,
+    assetsDir: 'assets',
+    emptyOutDir: true,
     rollupOptions: {
       input: {
         main: path.resolve(__dirname, 'index.html'),
+      },
+      output: {
+        manualChunks: undefined,
       },
     },
   },
