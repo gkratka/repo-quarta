@@ -43,4 +43,5 @@ export default defineConfig({
   },
   clearScreen: false,
   logLevel: 'info',
+  base: '/repo-quarta/',
 });
