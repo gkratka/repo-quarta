@@ -22,10 +22,10 @@ export const blogPosts = [
   {
     id: 3,
     title: 'O que é Outorga de Uso de Recursos Hídricos?',
-    excerpt: 'Descubra o que é a outorga de água, quem deve solicitar, quando é obrigatória e como funciona o processo para regularizar o uso de recursos hídricos no Brasil.',
+    excerpt: 'Entenda a importância da outorga de água, quem deve solicitar, quando é obrigatória e como funciona o processo para regularizar o uso de recursos hídricos no Brasil.',
     date: '2 de Junho de 2025',
     author: 'Fonte: Projeta Sustentável',
-    image: 'assets/outorga-agua.png',
+    image: '',
     category: 'Recursos Hídricos',
     link: 'https://www.projetasustentavel.com/o-que-e-a-outorga'
   }

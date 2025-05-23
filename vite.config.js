@@ -1,20 +1,18 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const vite_1 = require("vite");
-const plugin_react_1 = __importDefault(require("@vitejs/plugin-react"));
-const node_path_1 = __importDefault(require("node:path"));
-const node_url_1 = require("node:url");
-const __dirname = node_path_1.default.dirname((0, node_url_1.fileURLToPath)(import.meta.url));
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
 // https://vitejs.dev/config/
-exports.default = (0, vite_1.defineConfig)({
-    plugins: [(0, plugin_react_1.default)()],
+export default defineConfig({
+    plugins: [react()],
     base: '/repo-quarta/',
     resolve: {
         alias: {
-            '@': node_path_1.default.resolve(__dirname, './src'),
+            '@': path.resolve(__dirname, './src'),
         },
     },
     server: {
@@ -34,7 +32,7 @@ exports.default = (0, vite_1.defineConfig)({
         emptyOutDir: true,
         rollupOptions: {
             input: {
-                main: node_path_1.default.resolve(__dirname, 'index.html'),
+                main: path.resolve(__dirname, 'index.html'),
             },
             output: {
                 manualChunks: undefined,
